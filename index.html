@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco-Friendly</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: 'poppins', sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      padding:10px 20px;
+    }
+     .logo
+    {
+      margin-top: -100px;
+      background-color: none;
+      /* margin-left: 120px; */
+    }
+
+    nav{
+      flex: 1;
+      text-align: right;
+    }
+
+    nav ul{
+      display: inline-block;
+      list-style-type: none;
+    }
+
+    nav ul li{
+      display: inline-block;
+      margin-right: 20px; 
+      /* margin-top: -100px; */
+    }
+
+    a{
+       text-decoration: none;
+       color: #555;
+      
+    }
+
+    p{
+      color: #555;
+    }
+
+    .container{
+      max-width: 1300px;
+      margin:auto;
+      padding-left: 25px;
+      padding-right: 25px;
+        }
+
+    .row{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .col-2{
+      flex-basis: 50%;
+      min-width: 300px;
+    }
+
+    .col-2 img{
+      max-width: 100%;
+      padding: 50px 0;
+    }
+
+    .col-2 h1 {
+      font-size: 50px;
+      line-height: 60px;
+      margin: 25px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff523b;
+      color: #fff;
+      padding: 8px 30px ;
+      margin: 30px 0;
+      border-radius: 30px;
+      transition: background0.5s;
+    }
+
+    .btn:hover{
+      background: #563434;
+    }
+
+    .header{
+      background: radial-gradient(#fff, #ffd6d6);
+    }
+
+    .header .row{
+      margin-top: 70px;
+    }
+
+    .categories{
+      margin: 70px 0;
+    }
+
+    .col-3{
+      flex-basis: 30%;
+      min-width: 250px;
+      margin-bottom: 30px;
+    }
+
+    .col-3 img{
+      width: 100%;
+    }
+
+    .small-container{
+      max-width: 1080px;
+      margin: auto;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    .col-4{
+      flex-basis: 25%;
+      padding: 10px;
+      min-width: 200px;
+      margin-bottom: 50px;
+      transition: transform 0.5s;
+    }
+
+    .col-4 img{
+      width: 100%;
+    }
+
+    .title{
+      text-align: center;
+      margin: 0 auto 80px;
+      position: relative;
+      line-height: 60px;
+      color: #555;
+    }
+
+    .title::after{
+      content: '';
+      background: #ff523b ;
+      width: 80px;
+      height: 5px;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    h4{
+      color: #555;
+      font-weight: normal;
+    }
+
+    .col-4 p{
+      font-size: 14px;
+    }
+
+    .rating .fa{
+      color: #ff523b;
+    }
+
+    .col-4:hover{
+      transform: translate(-5px);
+    }
+          /* offer */
+    .offer{
+      background: radial-gradient(#fff, #ffd6d6);
+      margin-top: 80px;
+      padding: 30px 0;
+    }
+
+    .col-2 .offer-img{
+      padding: 50px;
+    }
+
+    small{
+      color: #555;
+    }
+
+
+    /* Testimonial */
+
+    .testimonial{
+      padding-top: 100px;
+    }
+
+    .testimonial .col-3{
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.5s;
+
+    }
+
+    .testimonial .col-3 img{
+      width: 50px;
+      margin-top: 20px;
+      border-radius: 50%;
+    }
+
+    .testimonial .col-3:hover{
+      transform: translateY(-10px);
+    }
+
+    .fa.fa-quote-left{
+      font-size: 34px;
+      color: #ff523b;
+    }
+
+    .col-3 p{
+      font-size: 12px;
+      margin: 12px 0;
+      color: #777;
+    }
+
+    .testimonial .col-3 h3{
+      font-weight: 600;
+      color: #555;
+      font-size: 16px;
+
+    }
+
+    /* BRANDS */
+
+    .brands {
+      margin: 100px auto;
+    }
+
+    .col-5{
+      width: 160px;
+    }
+
+    .col-5 img{
+      width: 100%;
+      cursor: pointer;
+      filter: grayscale(100%);
+    }
+
+    .col-5 img:hover{
+      filter: grayscale(0);
+    }
+
+    .footer{
+      background:#000;
+      color: #8a8a8a;
+      font-size: 14px;
+      padding: 60px 0 20px;
+    }
+
+    .footer p{
+      color: #8a8a8a;
+    }
+
+    .footer h3{
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+      min-width: 250px;
+      margin-bottom: 20px;
+    }
+
+    .footer-col-1{
+      flex-basis: 30%;
+    }
+
+    .footer-col-2 {
+      flex: 1;
+      text-align: center;
+    }
+
+    .footer-col-2 img{
+      width: 180px;
+      margin-bottom: 20px;
+    }
+
+    .footer-col-3, .footer-col-4 {
+      flex-basis: 12%;
+      text-align: center;
+    }
+
+    .ul{
+      list-style-type: none;
+    }
+
+    .app-logo{ 
+      margin-top: 20px;
+    }
+
+    .app-logo img{
+      width: 140px;
+    }
+
+    .footer hr{
+      border: none;
+      background: #b5b5b5;
+      height: 1px;
+      margin: 20px 0;
+    }
+
+    .copyright {
+      text-align: center;
+    }
+
+
+    .menu-icon{
+      width: 20px;
+      margin-left: 20px;
+    }
+
+    /* ----------media query for menu----------- */
+
+    @media only screen and (max-widht:800px){
+      nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+      }
+
+      nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+
+
+      <div class="container">
+        <div class="navbar">
+          <!-- <div class="logo">
+            <img src="Picsart_25-06-16_11-01-37-125.jpg" width="225px">
+          </div> -->
+          <div>ECO FRIENDLY</div>
+          <nav>
+              <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Prodcuts</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Profile</a></li>
+              
+              </ul>
+          </nav>
+
+          <img src="RedStore_Img/images/cart.png" width="30px" height="30px">
+          <img src="RedStore_Img/images/menu.png" class="menu-icon">
+      </div>
+
+      <div class="row">
+        <div class="col-2">
+            <h1>Fashion With A <br> Twist Of Individuality</h1>
+            <p>"fashion with a twist of individuality means wearing <br> trends your way-bold, unique, and truly you"</p>
+            <a href="" class="btn">Explore Now &#8594;</a>
+        </div>
+        <div class="col-2">
+          <img src="RedStore_Img/images/image1.png">
+          
+        </div>
+
+      </div>
+      </div>
+    </div>
+      
+          <!-- Featured CATEGROIES -->
+
+          <div class="categories">
+            <div class="small-container">
+              <div class="row">
+                <div class="col-3">
+                  <img src="RedStore_Img/images/category-1.jpg">
+                </div>
+
+                <div class="col-3">
+                  <img src="RedStore_Img/images/category-2.jpg">
+                </div>
+
+                <div class="col-3">
+                  <img src="RedStore_Img/images/category-3.jpg">
+                </div>
+
+                </div>
+            </div>
+
+
+
+          </div>
+
+      <!-- featured products -->
+
+      <div class="small-container">
+        <h2 class="title">Featured Products</h2>
+      <div class="row">
+        <div class="col-4">
+          <img src="RedStore_Img/images/product-1.jpg">
+          <h4>Red Printed T-shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>150.00 Rs</p>
+        </div>
+
+        <div class="col-4">
+          <img src="RedStore_Img/images/product-2.jpg">
+          <h4>Red Printed T-shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+          <p>150.00 Rs</p>
+        </div>
+
+        <div class="col-4">
+          <img src="RedStore_Img/images/product-3.jpg">
+          <h4>Red Printed T-shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>150.00 Rs</p>
+        </div>
+
+        <div class="col-4">
+          <img src="RedStore_Img/images/product-4.jpg">
+          <h4>Red Printed T-shirt</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half"></i>
+          </div>
+          <p>150.00 Rs</p>
+        </div>
+        </div>
+
+        <!-- latest products  -->
+
+        <h2 class="title">Latest Products</h2>
+
+        <div class="row">
+          <div class="col-4">
+            <img src="RedStore_Img/images/product-5.jpg">
+            <h4>Red Printed T-shirt</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>150.00 Rs</p>
+          </div>
+  
+          <div class="col-4">
+            <img src="RedStore_Img/images/product-6.jpg">
+            <h4>Red Printed T-shirt</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p>150.00 Rs</p>
+          </div>
+  
+          <div class="col-4">
+            <img src="RedStore_Img/images/product-7.jpg">
+            <h4>Red Printed T-shirt</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>150.00 Rs</p>
+          </div>
+  
+          <div class="col-4">
+            <img src="RedStore_Img/images/product-8.jpg">
+            <h4>Red Printed T-shirt</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half"></i>
+            </div>
+            <p>150.00 Rs</p>
+          </div>
+
+          <div class="row">
+            <div class="col-4">
+              <img src="RedStore_Img/images/product-9.jpg">
+              <h4>Red Printed T-shirt</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+              <p>150.00 Rs</p>
+            </div>
+    
+            <div class="col-4">
+              <img src="RedStore_Img/images/product-10.jpg">
+              <h4>Red Printed T-shirt</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>150.00 Rs</p>
+            </div>
+    
+            <div class="col-4">
+              <img src="RedStore_Img/images/product-11.jpg">
+              <h4>Red Printed T-shirt</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+              <p>150.00 Rs</p>
+            </div>
+    
+            <div class="col-4">
+              <img src="RedStore_Img/images/product-12.jpg">
+              <h4>Red Printed T-shirt</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+              </div>
+              <p>150.00 Rs</p>
+            </div>
+            </div>
+
+          </div>
+
+      </div>
+
+      <!-- offer -->
+
+      <div class="offer">
+        <div class="small-container">
+          <div class="row">
+            <div class="col-2">
+              <img src="RedStore_Img/images/exclusive.png" class="offer-img">
+            </div>
+            <div class="col-2">
+              <p>Exclusively Available on Eco-Friendly</p>
+              <h1>Smart Band 4</h1>
+              <small>The Mi Smart Band 4 features a 39.9% larger (than Mi Band 3) AMOLED color full-touch display with adjustable brightness, so everything is clear as can be.</small>
+                <a href="" class="btn">Buy Now &#8594;</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+  <!-- ----------  testimonial --------- -->
+
+          <div class="testimonial">
+            <div class="small-container">
+              <div class="row">
+                <div class="col-3">
+                  <i class="fa fa-quote-left"></i>
+                  <p>Wearing eco-friendly fashion makes me feel stylish and responsible--good for me, great for the planet</p>
+                  <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <img src="RedStore_Img/images/user-1.png">
+                  <h3>Sean Parker</h3>
+                </div>
+
+                <div class="col-3">
+                  <i class="fa fa-quote-left"></i>
+                  <p>Wearing eco-friendly fashion makes me feel stylish and responsible--good for me, great for the planet</p>
+                  <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                  </div>
+                  <img src="RedStore_Img/images/user-2.png">
+                  <h3>Mike Smith</h3>
+                </div>
+
+                <div class="col-3">
+                  <i class="fa fa-quote-left"></i>
+                  <p>Wearing eco-friendly fashion makes me feel stylish and responsible--good for me, great for the planet</p>
+                  <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                  <img src="RedStore_Img/images/user-3.png">
+                  <h3>Mabol Joe</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="brands">
+            <div class="small-container">
+              <div class="row">
+                <div class="col-5">
+                  <img src="RedStore_Img/images/logo-godrej.png">
+                </div>
+                <div class="col-5">
+                  <img src="RedStore_Img/images/logo-oppo.png">
+                </div>
+                <div class="col-5">
+                  <img src="RedStore_Img/images/logo-coca-cola.png">
+                </div>
+                <div class="col-5">
+                  <img src="RedStore_Img/images/logo-paypal.png">
+                </div>
+                <div class="col-5">
+                  <img src="RedStore_Img/images/logo-philips.png">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+          <!-- ---------footer------ -->
+
+        <div class="footer">
+          <div class="container">
+            <div class="row">
+              <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App For Android and ios mobile phone.</p>
+                <div class="app-logo">
+                  <img src="RedStore_Img/images/play-store.png">
+                  <img src="RedStore_Img/images/app-store.png">
+                </div>
+              </div>
+
+              <div class="footer-col-2">
+                <img src="RedStore_Img/images/logo-white.png">
+                <p>Our Purpose Is To Sustainably Make the Pleasure and Banefits of Sports Accessible to the Many.</p>
+              </div>
+
+              <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                  <li>Coupons</li>
+                  <li>Blog Post</li>
+                  <li>Return Policy</li>
+                  <li>Join Affiliate</li>
+                </ul>
+              </div>
+
+
+              <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <ul>
+                  <li>Facebook</li>
+                  <li>Instagram</li>
+                  <li>Twitter</li>
+                  <li>Youtube</li>
+                </ul>
+              </div>
+
+
+            </div>
+
+            <hr>
+            <p class="copyright">Copyright all reversed 2025</p>
+          </div>
+        </div>
+</body>
+</html>
